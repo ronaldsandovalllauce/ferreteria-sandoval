@@ -1,0 +1,255 @@
+/* colores y tipografía del sitio */
+:root {
+  --azul-acero: #1f4b63;
+  --azul-acero-oscuro: #163a4d;
+  --naranja-ferreteria: #c97f1e;
+  --naranja-boton: #a8630f;
+  --naranja-boton-oscuro: #7e4a0a;
+  --gris-oscuro: #2b2b2b;
+  --gris-medio: #5c6670;
+  --gris-claro: #ece7e0;
+  --borde: #d6cfc4;
+  --blanco: #ffffff;
+  --fondo: #fbf9f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gris-oscuro);
+  background-color: var(--fondo);
+  line-height: 1.5;
+}
+
+/* enlace para saltar al contenido, solo visible al enfocarlo */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--azul-acero);
+  color: var(--blanco);
+  padding: 0.6rem 1rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* encabezado y menú principal */
+.encabezado {
+  background-color: var(--azul-acero);
+  color: var(--blanco);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.encabezado a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal a {
+  font-weight: bold;
+}
+
+.menu-principal a[aria-current="page"] {
+  border-bottom: 3px solid var(--naranja-ferreteria);
+  padding-bottom: 2px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* bloque de bienvenida con imagen */
+.bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bienvenida img {
+  flex: 1 1 320px;
+  border-radius: 8px;
+}
+
+.bienvenida-texto {
+  flex: 1 1 320px;
+}
+
+h1 {
+  color: var(--azul-acero-oscuro);
+}
+
+h2 {
+  color: var(--azul-acero);
+  border-bottom: 3px solid var(--naranja-ferreteria);
+  padding-bottom: 0.3rem;
+}
+
+/* horario y dirección */
+.datos-tienda dt {
+  font-weight: bold;
+  color: var(--gris-medio);
+}
+
+.datos-tienda dd {
+  margin: 0 0 0.6rem 0;
+}
+
+address {
+  font-style: normal;
+}
+
+/* tarjetas de productos destacados */
+.destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.destacados article {
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--naranja-ferreteria);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--gris-claro);
+}
+
+/* tabla de productos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--azul-acero-oscuro);
+}
+
+th, td {
+  border: 1px solid var(--borde);
+  padding: 0.6rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--azul-acero);
+  color: var(--blanco);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--gris-claro);
+}
+
+/* figura con imagen y texto explicativo */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--gris-medio);
+  margin-top: 0.4rem;
+}
+
+/* formulario de contacto */
+fieldset {
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--azul-acero-oscuro);
+  padding: 0 0.4rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  background-color: var(--naranja-boton);
+  color: var(--blanco);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--naranja-boton-oscuro);
+}
+
+/* pie de página */
+footer {
+  background-color: var(--gris-claro);
+  border-top: 4px solid var(--naranja-ferreteria);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+footer a {
+  color: var(--azul-acero);
+}
+
+footer p {
+  color: var(--gris-medio);
+  font-size: 0.9rem;
+}
