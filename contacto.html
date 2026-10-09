@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Ferretería Sandoval</title>
+  <meta name="description" content="Dirección, horario y formulario de contacto de la Ferretería Sandoval en Chiclayo.">
+  <link rel="icon" type="image/png" href="imagenes/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <a href="index.html"><img src="imagenes/logo-ferreteria-sandoval.svg" alt="Logo de Ferretería Sandoval, ir al inicio" width="260" height="52"></a>
+    <nav class="menu-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="materiales-pesados.html">Materiales pesados</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <h1>Contacto</h1>
+
+    <dl class="datos-tienda">
+      <dt>Dirección</dt>
+      <dd>
+        <address>
+          Jr. Pedro Ruiz 124, Chiclayo, Lambayeque
+        </address>
+      </dd>
+      <dt>Horario</dt>
+      <dd>Lunes a sábado, de 7:00 a. m. a 6:00 p. m.</dd>
+      <dt>Teléfono / Yape</dt>
+      <dd>906 163 683</dd>
+      <dt>Correo</dt>
+      <dd><a href="mailto:iv75089335@idat.pe">iv75089335@idat.pe</a></dd>
+    </dl>
+
+    <h2>Escríbenos</h2>
+    <!-- sin action: la página es estática y no hay a dónde mandar los datos -->
+    <form>
+      <fieldset>
+        <legend>Tus datos</legend>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="987654321">
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu consulta</legend>
+        <label for="asunto">Asunto</label>
+        <select id="asunto" name="asunto">
+          <option value="producto">Consulta sobre un producto</option>
+          <option value="domicilio">Pedido a domicilio</option>
+          <option value="llaves">Duplicado de llaves</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </fieldset>
+
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </main>
+
+  <footer>
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="materiales-pesados.html">Materiales pesados</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <p>Ferretería Sandoval. Jr. Pedro Ruiz 124, Chiclayo.</p>
+  </footer>
+</body>
+</html>
